@@ -5,7 +5,7 @@ import Home from "./Screens/Home";
 
 const Drawer = createDrawerNavigator();
 
-export default function Navigator(props) {
+export default function Navigator() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
@@ -15,13 +15,13 @@ export default function Navigator(props) {
         }}
       >
         <Drawer.Screen name="Hoje">
-          {(props) => <Home title={"Hoje"} {...props} />}
+          {(props) => <Home title={"Hoje"} days={0} {...props} />}
         </Drawer.Screen>
         <Drawer.Screen name="Semana">
-          {(props) => <Home title={"Semana"} {...props} />}
+          {(props) => <Home title={"Semana"} days={7} {...props} />}
         </Drawer.Screen>
         <Drawer.Screen name="Mês">
-          {(props) => <Home title={"Mês"} {...props} />}
+          {(props) => <Home title={"Mês"} days={30} {...props} />}
         </Drawer.Screen>
       </Drawer.Navigator>
     </NavigationContainer>
