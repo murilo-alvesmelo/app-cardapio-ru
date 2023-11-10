@@ -6,6 +6,7 @@ const estilo = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
   },
+  icon: { paddingTop: 10 },
   iconContainer: {
     flex: 1,
     paddingHorizontal: 15,
