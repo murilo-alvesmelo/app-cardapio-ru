@@ -14,9 +14,14 @@ interface Props {
     refeicao: string;
     salada: string;
   };
+  days?: number;
 }
 
-export default function ItemCardapio({ refeicao, index }: Props): JSX.Element {
+export default function ItemCardapio({
+  refeicao,
+  index,
+  days,
+}: Props): JSX.Element {
   const [visible, setVisible] = useState(false);
 
   const setModalVisible = () => {
@@ -33,8 +38,11 @@ export default function ItemCardapio({ refeicao, index }: Props): JSX.Element {
           onPress={() => setVisible(true)}
           style={{ flexDirection: "row" }}
         >
-          <FontAwesomeIcon style={estilo.icon} icon={"utensils"} size={25} />
-          <Text style={estilo.title}>{refeicao.refeicao}</Text>
+          <View style={estilo.itemRow}>
+            <FontAwesomeIcon style={estilo.icon} icon={"utensils"} size={25} />
+            <Text style={estilo.title}>{refeicao.refeicao}</Text>
+          </View>
+          <FontAwesomeIcon style={estilo.icon} icon={"sun"} size={25} />
         </TouchableOpacity>
       </Animated.View>
       <View style={estilo.divisor} />
@@ -42,6 +50,7 @@ export default function ItemCardapio({ refeicao, index }: Props): JSX.Element {
         visible={visible}
         setModalVisible={setModalVisible}
         refeicao={refeicao}
+        days={days}
       />
     </>
   );
