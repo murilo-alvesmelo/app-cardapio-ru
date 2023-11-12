@@ -15,6 +15,10 @@ const estilo = StyleSheet.create({
   title: {
     fontSize: 16,
   },
+  itemRow: {
+    flexDirection: "row",
+    flex: 1,
+  },
   divisor: {
     alignSelf: "center",
     borderWidth: 1,

@@ -27,10 +27,10 @@ export default function Home({ navigation, title, days }: Props): JSX.Element {
           setRefeicoes(response.data);
         })
         .catch((error) => {
-          console.log(error);
+          console.error(error);
         });
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -57,7 +57,12 @@ export default function Home({ navigation, title, days }: Props): JSX.Element {
         <FlatList
           data={refeicoes}
           renderItem={({ item, index }) => (
-            <ItemCardapio key={`${item.id}`} refeicao={item} index={index} />
+            <ItemCardapio
+              key={`${item.id}`}
+              refeicao={item}
+              index={index}
+              days={days}
+            />
           )}
           keyExtractor={(item) => item.refeicao}
           refreshControl={

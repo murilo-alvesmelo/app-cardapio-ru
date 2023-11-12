@@ -30,7 +30,10 @@ export default function Topo({ navigation, title }: Props): JSX.Element {
     <View style={estilo.container}>
       <ImageBackground source={getImage()} style={{ flex: 1 }}>
         <View style={estilo.iconContainer}>
-          <TouchableOpacity onPress={() => navigation.openDrawer()}>
+          <TouchableOpacity
+            style={estilo.icon}
+            onPress={() => navigation.openDrawer()}
+          >
             <FontAwesomeIcon icon={"bars"} color={"#fff"} size={30} />
           </TouchableOpacity>
           <View>
