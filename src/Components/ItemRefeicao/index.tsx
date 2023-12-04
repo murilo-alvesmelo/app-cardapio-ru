@@ -42,7 +42,7 @@ export default function ItemCardapio({
             <FontAwesomeIcon style={estilo.icon} icon={"utensils"} size={25} />
             <Text style={estilo.title}>{refeicao.refeicao}</Text>
           </View>
-          <FontAwesomeIcon style={estilo.icon} icon={"sun"} size={25} />
+          <FontAwesomeIcon style={estilo.icon} icon={refeicao.tipo === "Janta" ? "moon" : "sun"} size={25} />
         </TouchableOpacity>
       </Animated.View>
       <View style={estilo.divisor} />
