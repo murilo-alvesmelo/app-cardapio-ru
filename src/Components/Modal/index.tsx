@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import React, { useState } from "react";
 import { View, Modal, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { estilo } from "./estilo";
+import moment = require("moment");
 
 interface Props {
   refeicao: {
@@ -42,7 +43,7 @@ export default function ModalRefeicao({
                 { backgroundColor: getColorCabecalho() },
               ]}
             >
-              <Text style={estilo.titulo}>Refeição</Text>
+              <Text style={estilo.titulo}>{refeicao.tipo} de {moment(refeicao.estimateAt).format("dddd")}</Text>
               <TouchableOpacity onPress={setModalVisible} style={estilo.icon}>
                 <FontAwesomeIcon icon={"xmark"} size={25} color={"#fff"} />
               </TouchableOpacity>
@@ -68,6 +69,9 @@ export default function ModalRefeicao({
                 Salada: {refeicao.salada}
               </Text>
               <View style={estilo.divisor} />
+              <Text style={estilo.infoRefeicaoText}>
+                Sobremesa: {refeicao.sobremesa}
+              </Text>
             </View>
           </View>
         </View>
