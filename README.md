@@ -1,7 +1,7 @@
 
 # App Cardapio RU
 
-App que consome a [Api de cardapio](https://github.com/murilo-alvesmelo/api-cardapio-ru)
+App que consome a [Api de cardapio](https://github.com/murilo-alvesmelo/api-cardapio-ru), para um projeto da materia de Desenvolvimento Web Mobile, que seria um aplicativo de cardapio para o Restaurante Universitário da UFT
 
 ## Rodando localmente
 
